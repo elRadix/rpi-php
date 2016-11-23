@@ -1,11 +1,7 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
+#FROM resin/rpi-raspbian:latest
+FROM jsurf/rpi-raspbian:latest
 
-#FROM debian:jessie
-FROM resin/rpi-raspbian:latest
+RUN [ "cross-build-start" ]
 
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
@@ -177,6 +173,8 @@ RUN chmod +x /usr/local/bin/docker-php-ext-*
 COPY apache2-foreground /usr/local/bin/
 RUN chmod +x /usr/local/bin/apache2-foreground
 WORKDIR /var/www/html
+
+RUN [ "cross-build-end" ]
 
 EXPOSE 80
 CMD ["apache2-foreground"]
