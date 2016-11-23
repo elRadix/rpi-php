@@ -1,4 +1,4 @@
-FROM rpi-php:5.6-apache
+FROM tobi312/rpi-php:5.6-apache
 
 MAINTAINER Tobias Hargesheimer <docker@ison.ws>
 
@@ -52,5 +52,7 @@ RUN ln -s /usr/include/arm-linux-gnueabihf/gmp.h /usr/include/gmp.h && \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd
 
-RUN echo Europe/Berlin >/etc/timezone && dpkg-reconfigure -f noninteractive tzdata && \
-	echo "date.timezone=Europe/Berlin" > /usr/local/etc/php/php.ini && echo "display_errors = On" >> /usr/local/etc/php/php.ini
+ENV TZ Europe/Berlin
+
+RUN echo ${TZ} >/etc/timezone && dpkg-reconfigure -f noninteractive tzdata && \
+	echo "date.timezone=${TZ}" > /usr/local/etc/php/php.ini && echo "display_errors = On" >> /usr/local/etc/php/php.ini
