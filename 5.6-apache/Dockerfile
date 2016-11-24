@@ -1,7 +1,7 @@
-FROM resin/rpi-raspbian:latest
-#FROM jsurf/rpi-raspbian:latest
+#FROM resin/rpi-raspbian:latest
+FROM jsurf/rpi-raspbian:latest
 
-#RUN [ "cross-build-start" ]
+RUN [ "cross-build-start" ]
 
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
@@ -174,7 +174,7 @@ COPY apache2-foreground /usr/local/bin/
 RUN chmod +x /usr/local/bin/apache2-foreground
 WORKDIR /var/www/html
 
-#RUN [ "cross-build-end" ]
+RUN [ "cross-build-end" ]
 
 EXPOSE 80
 CMD ["apache2-foreground"]
