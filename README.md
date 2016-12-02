@@ -1,4 +1,4 @@
-# PHP with Apache2 on Raspberry Pi
+# PHP (with Apache2) on Raspberry Pi
 
 ### Image Info
 This Image based on the Docker official image for php
