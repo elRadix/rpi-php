@@ -3,7 +3,7 @@
 #### IMPORTANT: This image is not ready yet! There is still a lot to do.
 
 ### Image Info
-https://secure.php.net/
+* PHP Website: https://secure.php.net/
 
 ### How to use this image
 * ``` docker pull tobi312/rpi-php ```
