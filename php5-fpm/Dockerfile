@@ -5,6 +5,7 @@ MAINTAINER Tobias Hargesheimer <docker@ison.ws>
 
 ENV LANG C.UTF-8
 ENV TZ Europe/Berlin
+ENV TERM xterm # export TERM=xterm because Error opening terminal: unknown.
 
 RUN [ "cross-build-start" ]
 
