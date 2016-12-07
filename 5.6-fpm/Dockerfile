@@ -34,7 +34,7 @@ RUN chmod +x /entrypoint.sh
 
 RUN [ "cross-build-end" ]	
 
-VOLUME /etc/php5/fpm/pool.d/ /var/www/html
+VOLUME /var/www/html /etc/php5/fpm/pool.d/ /var/lib/php5/sessions
 EXPOSE 9000
 
 ENTRYPOINT ["/entrypoint.sh"]
