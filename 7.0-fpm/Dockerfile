@@ -33,7 +33,8 @@ RUN sed -i -e 's/error_log = \/var\/log\/php7.0-fpm.log/error_log = \/proc\/self
 	sed -i -e 's/;access.log = log\/$pool.access.log/access.log = \/proc\/self\/fd\/2/g' /etc/php/7.0/fpm/pool.d/www.conf && \
 	sed -i -e 's/;catch_workers_output = yes/catch_workers_output = yes/g' /etc/php/7.0/fpm/pool.d/www.conf && \
 	sed -i -e 's/;clear_env = no/clear_env = no/g' /etc/php/7.0/fpm/pool.d/www.conf && \
-	sed -i -e 's/listen = \/var\/run\/php7.0-fpm.sock/listen = [::]:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
+	sed -i -e 's/listen = \/run\/php\/php7.0-fpm.sock/listen = [::]:9000/g' /etc/php/7.0/fpm/pool.d/www.conf && \
+	mkdir -p /run/php
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
@@ -44,4 +45,4 @@ VOLUME /var/www/html /etc/php/7.0/fpm/pool.d/ /var/lib/php/sessions
 EXPOSE 9000
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["php5-fpm"]
+CMD ["php-fpm7.0"]
