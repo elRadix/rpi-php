@@ -1,7 +1,7 @@
 # PHP on Raspberry Pi / armhf
 
 ### Supported tags and respective `Dockerfile` links
--	`7.0-fpm` (*Coming soon*)
+-	[`7.0-fpm` TESTVERSION (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-php/blob/master/7.0-fpm/Dockerfile)
 -	[`5.6-fpm`, `latest` (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-php/blob/master/5.6-fpm/Dockerfile)
 
 ### What is PHP?
