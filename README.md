@@ -22,12 +22,12 @@ or build it yourself
 * ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d tobi312/rpi-php:5.6-fpm ```   
 
 ### Environment Variables
-* TZ=Europe/Berlin (Default)
-* PHP_ERRORS=1
-* PHP_MEM_LIMIT=128 (in MB)
-* PHP_POST_MAX_SIZE=8 (in MB)
-* PHP_UPLOAD_MAX_FILESIZE=2 (in MB)
-* PHP_MAX_FILE_UPLOADS=20
+* `TZ` (Default: Europe/Berlin)
+* `PHP_ERRORS` (set 1 to enable)
+* `PHP_MEM_LIMIT` (Value in MB)
+* `PHP_POST_MAX_SIZE` (Value in MB)
+* `PHP_UPLOAD_MAX_FILESIZE` (Value in MB)
+* `PHP_MAX_FILE_UPLOADS`
 
 ### You need httpd?, see here: 
 * Apache2
