@@ -23,7 +23,28 @@ RUN apt-get update && apt-get install -y -t stretch \
 	imagemagick \
 	sqlite sqlite3 \
 	#sendmail-bin \
-	php7.0 php7.0-fpm php7.0-cli php7.0-json php7.0-curl php7.0-gd php-imagick php7.0-sqlite3 php7.0-pgsql php7.0-mysql php7.0-imap php7.0-xsl php7.0-ldap php-memcache php7.0-mcrypt php-xdebug php7.0-intl php7.0-xmlrpc php-pear php-geoip php7.0-opcache php-gettext \
+	php7.0 \
+	php7.0-fpm \
+	php7.0-cli \
+	php7.0-json \
+	php7.0-curl \
+	php7.0-gd \
+	php-imagick \
+	php7.0-sqlite3 \
+	php7.0-pgsql \
+	php7.0-mysql \
+	php7.0-imap \
+	php7.0-xsl \
+	php7.0-ldap \
+	php-memcache \
+	php7.0-mcrypt \
+	#php-xdebug \
+	php7.0-intl \
+	php7.0-xmlrpc \
+	php-pear \
+	php-geoip \
+	php7.0-opcache \
+	php-gettext \
 	--no-install-recommends && \
 	rm -rf /var/lib/apt/lists/* && \
 	mkdir -p /var/www/html && chown -R www-data:www-data /var/www
