@@ -34,9 +34,9 @@ RUN apt-get update && apt-get install -y \
 	php5-mcrypt \
 	#php5-xdebug \
 	php5-intl \
-	php5-xmlrpc \
+	#php5-xmlrpc \
 	php-pear \
-	php5-dbg \
+	#php5-dbg \
 	php5-geoip \
 	--no-install-recommends && \
 	rm -rf /var/lib/apt/lists/* && \

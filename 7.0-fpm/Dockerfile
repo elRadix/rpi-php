@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y -t stretch \
 	php7.0-mcrypt \
 	#php-xdebug \
 	php7.0-intl \
-	php7.0-xmlrpc \
+	#php7.0-xmlrpc \
 	php-pear \
 	php-geoip \
 	php7.0-opcache \
