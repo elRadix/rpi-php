@@ -1,5 +1,5 @@
-#FROM resin/rpi-raspbian:latest
-FROM jsurf/rpi-raspbian:latest
+#FROM resin/rpi-raspbian:stretch
+FROM jsurf/rpi-raspbian:stretch
 
 MAINTAINER Tobias Hargesheimer <docker@ison.ws>
 
@@ -9,13 +9,7 @@ ENV TZ Europe/Berlin
 
 RUN [ "cross-build-start" ]
 
-RUN echo "deb http://mirrordirector.raspbian.org/raspbian/ stretch main contrib non-free rpi" >> /etc/apt/sources.list.d/stretch.list && \
-	echo 'Package: *\n\
-Pin: release n=stretch\n\
-Pin-Priority: 400\n'\
->> /etc/apt/preferences.d/stretch-pinning
-
-RUN apt-get update && apt-get install -y -t stretch \
+RUN apt-get update && apt-get install -y \
 	nano \
 	zip \
 	wget \
