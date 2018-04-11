@@ -14,12 +14,12 @@ PHP is a server-side scripting language designed for web development, but which 
 ### How to use this image
 * ``` $ docker pull elradix/rpi-php:5.6 ```
 * Optional: ``` $ mkdir -p /home/pi/html ```
-* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6-fpm ``` 
+* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6 ``` 
 
 or build it yourself
 * ``` $ git clone https://github.com/elRadix/rpi-php.git && cd rpi-php ```
-* ``` $ docker build -t elradix/rpi-php:5.6-fpm ./5.6-fpm/ ``` 
-* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6-fpm ```   
+* ``` $ docker build -t elradix/rpi-php:5.6 ./5.6/ ``` 
+* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6 ```   
 
 ### Environment Variables
 * `TZ` (Default: Europe/Berlin)
