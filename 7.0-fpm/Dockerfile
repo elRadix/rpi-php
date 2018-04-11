@@ -3,7 +3,7 @@ FROM resin/rpi-raspbian:stretch
 MAINTAINER Tobias Hargesheimer <docker@ison.ws>
 
 ENV LANG C.UTF-8
-ENV TZ Europe/Berlin
+ENV TZ Europe/Brussels
 #ENV TERM xterm # export TERM=xterm because Error opening terminal: unknown.
 
 RUN [ "cross-build-start" ]
@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
 	#php-xdebug \
 	php7.0-intl \
 	#php7.0-xmlrpc \
+	php7.0-xml \
 	php-pear \
 	php-geoip \
 	php7.0-opcache \
