@@ -38,5 +38,5 @@ or build it yourself
 	* [GitHub](https://github.com/TobiasH87Docker/rpi-nginx)
 
 ### This Image on
-* [DockerHub](https://hub.docker.com/r/tobi312/rpi-php/)
-* [GitHub](https://github.com/TobiasH87Docker/rpi-php)
+* [DockerHub](https://hub.docker.com/r/elradix/rpi-php/)
+* [GitHub](https://github.com/elradix/rpi-php)
