@@ -1,8 +1,8 @@
 # PHP on Raspberry Pi / armhf
 
 ### Supported tags and respective `Dockerfile` links
--	[`7.0-fpm`, `latest` (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-php/blob/master/7.0-fpm/Dockerfile)
--	[`5.6-fpm` (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-php/blob/master/5.6-fpm/Dockerfile)
+-	[`7.0-fpm`, `latest` (*Dockerfile*)](https://github.com/elRadix/rpi-php/blob/master/7.0-fpm/Dockerfile)
+-	[`5.6-fpm` (*Dockerfile*)](https://github.com/elRadix/rpi-php/blob/master/5.6-fpm/Dockerfile)
 
 ### What is PHP?
 
@@ -12,14 +12,14 @@ PHP is a server-side scripting language designed for web development, but which 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/php/logo.png)
 
 ### How to use this image
-* ``` $ docker pull tobi312/rpi-php:5.6-fpm ```
+* ``` $ docker pull elradix/rpi-php:5.6 ```
 * Optional: ``` $ mkdir -p /home/pi/html ```
-* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d tobi312/rpi-php:5.6-fpm ``` 
+* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6-fpm ``` 
 
 or build it yourself
-* ``` $ git clone https://github.com/TobiasH87Docker/rpi-php.git && cd rpi-php ```
-* ``` $ docker build -t tobi312/rpi-php:5.6-fpm ./5.6-fpm/ ``` 
-* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d tobi312/rpi-php:5.6-fpm ```   
+* ``` $ git clone https://github.com/elRadix/rpi-php.git && cd rpi-php ```
+* ``` $ docker build -t elradix/rpi-php:5.6-fpm ./5.6-fpm/ ``` 
+* ``` $ docker run --name php --link some-sql-container:alias -v /home/pi/html:/var/www/html -e PHP_ERRORS=1 -e PHP_UPLOAD_MAX_FILESIZE=250 -d elradix/rpi-php:5.6-fpm ```   
 
 ### Environment Variables
 * `TZ` (Default: Europe/Berlin)
